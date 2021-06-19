@@ -1,0 +1,91 @@
+/* CSS RESET */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/* warna background  */
+body {
+  background: #1d212b;
+}
+
+/* pengaturan layout section */
+section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* warna tulisan di setiap tag turunan yang ganjil dari tag section */
+section:nth-child(odd) {
+  color: #fff;
+}
+
+/* warna tulisan dan warna background di setiap tag turunan yang genap dari tag section */
+section:nth-child(even) {
+  color: #1d212b;
+  background: #fff;
+}
+
+/* margin tag section */
+section .container {
+  margin: 100px;
+}
+
+section h1 {
+  font-size: 4rem;
+}
+
+/* atur ukuran dan kapitalisasi huruf dari setiap tag h2 di dalam tag section */
+section h2 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+/* layout class kotak */
+section .kotak {
+  display: flex;
+}
+
+/* memberikan warna background, margin, dan padding pada class text di dalam class kotak */
+section .text {
+  background: #2696e9;
+  margin: 20px;
+  padding: 20px;
+}
+
+/* merubah ukuran text, memberikan efek huruf kapital dan memberikan margin pada tag h3 di dalam class kotak */
+section .kotak h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+/* memberikan trasnsisi dan pergerakan secara horizontal pada class element sekaligus menghilankan elementnya*/
+.elemen {
+  position: relative;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: all 0.7s ease;
+}
+
+/* memunculkan kembali elementnya */
+.tampil {
+  position: relative;
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+/* media query */
+@media (max-width: 900px) {
+  section h1 {
+    font-size: 3rem;
+  }
+
+  section .kotak {
+    flex-direction: column;
+  }
+}
